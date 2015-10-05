@@ -11,6 +11,17 @@
     margin: 0 8px 14px 0;
     padding: 6px;
 }
+p.title {
+    font-family: "Arial","Helvetica",sans-serif;
+    font-size: 12px;
+    display: block;
+    margin: 0;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 170px;
+}
 </style>
 </head> 
 <body>
@@ -39,7 +50,7 @@ function populateSection(shopSectionID) {
                     //don't show prices:
                     //$("#" + shopSectionID).append('<div style="display: inline-block"><a target="_blank" href="' + resp.results[i].url + '">' + '<img class="pullImg" style="padding:' + imgPadding + '" src="' + resp.results[i].MainImage.url_170x135 + '"</img></a></div>');
                     //show prices:
-                    $("#" + shopSectionID).append('<div class="item"><a target="_blank" href="' + resp.results[i].url + '">' + '<img class="pullImg" alt="' + resp.results[i].description + '" src="' + resp.results[i].MainImage.url_170x135 + '"></img></a><p style="overview:hidden; width:170px;">' + resp.results[i].title + '</p></div>');
+                    $("#" + shopSectionID).append('<div class="item"><a target="_blank" href="' + resp.results[i].url + '">' + '<img class="pullImg" alt="' + resp.results[i].description + '" src="' + resp.results[i].MainImage.url_170x135 + '"></img></a><p class="title">' + resp.results[i].title + '</p></div>');
 
                 }
             }
