@@ -33,7 +33,7 @@ function populateSection(shopSectionID) {
                     //don't show prices:
                     //$("#" + shopSectionID).append('<div style="display: inline-block"><a target="_blank" href="' + resp.results[i].url + '">' + '<img class="pullImg" style="padding:' + imgPadding + '" src="' + resp.results[i].MainImage.url_170x135 + '"</img></a></div>');
                     //show prices:
-                    $("#" + shopSectionID).append('<div style="display: inline-block; padding-top:' + imgPadding + ';padding-left:' + imgPadding + ';padding-right' + imgPadding + '"><a target="_blank" href="' + resp.results[i].url + '">' + '<img class="pullImg" alt="' + resp.results[i].description + '" src="' + resp.results[i].MainImage.url_170x135 + '"></img></a><p style="overview:hidden; width:170px;">' + resp.results[i].title + '</p></div>');
+                    $("#" + shopSectionID).append('<div style="border: 1px solid #ECECEC; display: inline-block; padding-top:' + imgPadding + ';padding-left:' + imgPadding + ';padding-right' + imgPadding + '"><a target="_blank" href="' + resp.results[i].url + '">' + '<img class="pullImg" alt="' + resp.results[i].description + '" src="' + resp.results[i].MainImage.url_170x135 + '"></img></a><p style="overview:hidden; width:170px;">' + resp.results[i].title + '</p></div>');
 
                 }
             }
