@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <title></title>
 <script src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+<style>
+.item {
+    border: 1px solid #ECECEC;
+    display: inline-block;
+    margin: 0 8px 14px 0;
+    padding: 6px;
+}
+</style>
 </head> 
 <body>
 
@@ -16,8 +24,6 @@
 // just setting some variables...
 var api_key = "jqzjc3il7n9snbmk6zpv9499";
 var shop_name = "tatianazappaart";
-
-var imgPadding = "15px";
 
 // this function adds all the listings with a particular shop_section_id to the website
 function populateSection(shopSectionID) {
@@ -33,7 +39,7 @@ function populateSection(shopSectionID) {
                     //don't show prices:
                     //$("#" + shopSectionID).append('<div style="display: inline-block"><a target="_blank" href="' + resp.results[i].url + '">' + '<img class="pullImg" style="padding:' + imgPadding + '" src="' + resp.results[i].MainImage.url_170x135 + '"</img></a></div>');
                     //show prices:
-                    $("#" + shopSectionID).append('<div style="border: 1px solid #ECECEC; display: inline-block; padding-top:' + imgPadding + ';padding-left:' + imgPadding + ';padding-right' + imgPadding + '"><a target="_blank" href="' + resp.results[i].url + '">' + '<img class="pullImg" alt="' + resp.results[i].description + '" src="' + resp.results[i].MainImage.url_170x135 + '"></img></a><p style="overview:hidden; width:170px;">' + resp.results[i].title + '</p></div>');
+                    $("#" + shopSectionID).append('<div class="item"><a target="_blank" href="' + resp.results[i].url + '">' + '<img class="pullImg" alt="' + resp.results[i].description + '" src="' + resp.results[i].MainImage.url_170x135 + '"></img></a><p style="overview:hidden; width:170px;">' + resp.results[i].title + '</p></div>');
 
                 }
             }
