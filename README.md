@@ -1,1 +1,1 @@
-# Etsy tab for facebook page
+# Showcase for Etsy Store
